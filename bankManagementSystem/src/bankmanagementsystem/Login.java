@@ -9,8 +9,9 @@ public class Login extends JFrame implements ActionListener {
     JPasswordField pinTextField;
     Login(){
         setTitle("ATM");
-        setLayout(null);
+        setLayout(null); // making default layout which is center, making null
         
+        //logo
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -18,6 +19,7 @@ public class Login extends JFrame implements ActionListener {
         label.setBounds(60,10,100,100); //left, top, length, width
         add(label);
         
+        //header
         JLabel text = new JLabel("Welcome to ATM");
         text.setFont(new Font("Osward",Font.BOLD,38));
         text.setBounds(200,30,400,40);
@@ -30,6 +32,7 @@ public class Login extends JFrame implements ActionListener {
         
         cardTextField = new JTextField();
         cardTextField.setBounds(250, 130, 250, 40);
+        cardTextField.setFont(new Font("Arial",Font.BOLD,14));
         add(cardTextField);
         
         JLabel pin = new JLabel("PIN:");
@@ -39,6 +42,7 @@ public class Login extends JFrame implements ActionListener {
         
         pinTextField = new JPasswordField();
         pinTextField.setBounds(250, 190, 250, 40);
+        pinTextField.setFont(new Font("Arial",Font.BOLD,14));
         add(pinTextField);
         
         login = new JButton("LOGIN");
@@ -62,6 +66,7 @@ public class Login extends JFrame implements ActionListener {
         signup.addActionListener(this);
         add(signup);
         
+        //customize layout
         getContentPane().setBackground(Color.white);
         setSize(650,450);
         setVisible(true);
