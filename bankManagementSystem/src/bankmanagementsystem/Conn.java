@@ -10,8 +10,8 @@ public class Conn {
             //Class.forName(com.mysql.cj.jdbc.Driver);
             //Step 2: Create connection
             c = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankmanagementsystem", "root", "root");
-            s = c.createStatement();            
-            
+            //Create Statement
+            s = c.createStatement();              
         }
         catch(Exception e){
             System.out.println(e);
